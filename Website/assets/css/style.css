@@ -1,0 +1,41 @@
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #171717;
+}
+
+input:checked ~ .block {
+    background-color: white;
+}
+
+nav .active {
+    display: inline-block;
+    color: black;
+}
+
+nav a::after{
+    content: "";
+    height: 0;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    margin: auto;
+    border-bottom: 2px solid red;
+    display: block;
+    transition: width 0.5s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav .active::after{
+    visibility: visible;
+    content: "";
+    height: 0;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid red;
+    display: block;
+}
